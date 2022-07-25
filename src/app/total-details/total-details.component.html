@@ -1,0 +1,29 @@
+<h2 style="text-align:center;"><u>REACTIVE FORMS WITH VALIDATION AND FOCUS ON EMPTY FIELD</u></h2><br>
+
+<!-- <form  (submit)="submitForm($event)" value="personForm"> -->
+
+    <app-personal-details [personalFormDetails]="personalFormDetails"></app-personal-details>
+    <app-company-details [companyFormDetails]="companyFormDetails"></app-company-details>
+    <app-address-forms [addressFormDetails]="addressFormDetails"></app-address-forms> 
+
+
+    <div class="row">
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+            <button type="submit" (click)="submitForm()"  class="form space-between">Submit (Validation)</button>
+        </div>
+
+    </div>
+<!-- </form> -->

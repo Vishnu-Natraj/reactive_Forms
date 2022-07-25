@@ -1,0 +1,61 @@
+<h3>Company Details</h3>
+<form [formGroup]="companyFormDetails">
+
+    <div class="row">
+        <div class="col">
+            <label>Company Name</label>
+            <input class="form-control" formControlName="companyName" placeholder="Company Name...">
+
+            <div *ngIf="companyFormDetails.controls['companyName'].invalid && companyFormDetails.controls['companyName'].touched"
+                class="alert alert-danger">
+                <div *ngIf="companyFormDetails.controls['companyName'].errors.required">
+                    Company Name is required.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>Employee Name</label>
+            <input class="form-control" formControlName="employeeName" placeholder="Employee Name...">
+
+            <div *ngIf="companyFormDetails.controls['employeeName'].invalid && companyFormDetails.controls['employeeName'].touched"
+                class="alert alert-danger">
+                <div *ngIf="companyFormDetails.controls['employeeName'].errors.required">
+                    Employee Name is required.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>Employee ID</label>
+            <input class="form-control" formControlName="employeeId" placeholder="Employee ID...">
+
+            <div *ngIf="companyFormDetails.controls['employeeId'].invalid && companyFormDetails.controls['employeeId'].touched"
+                class="alert alert-danger">
+                <div *ngIf="companyFormDetails.controls['employeeId'].errors.required">
+                    Employee ID is required.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>Designation</label>
+            <input class="form-control" formControlName="designation" placeholder="Designation...">
+
+            <div *ngIf="companyFormDetails.controls['designation'].invalid && companyFormDetails.controls['designation'].touched"
+                class="alert alert-danger">
+                <div *ngIf="companyFormDetails.controls['designation'].errors.required">
+                    Designation is required.
+                </div>
+
+            </div>
+
+        </div>
+    </div><br>
+</form>

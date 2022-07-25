@@ -1,0 +1,62 @@
+<h3>Address Details</h3>
+<form [formGroup]="addressFormDetails">
+
+    <div class="row">
+        <div class="col">
+            <label>Primary Address</label>
+            <textarea class="form-control" formControlName="primaryAddress" placeholder="Primary Addreaa..."></textarea>
+
+            <div *ngIf="addressFormDetails.controls['primaryAddress'].invalid && addressFormDetails.controls['primaryAddress'].touched"
+                class="alert alert-danger">
+                <div *ngIf="addressFormDetails.controls['primaryAddress'].errors.required">
+                    Primary Address is required.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>secondary Address</label>
+            <textarea class="form-control" formControlName="secondaryAddress"
+                placeholder="Secondary Address..."></textarea>
+
+            <div *ngIf="addressFormDetails.controls['secondaryAddress'].invalid && addressFormDetails.controls['secondaryAddress'].touched"
+                class="alert alert-danger">
+                <div *ngIf="addressFormDetails.controls['secondaryAddress'].errors.required">
+                    Secondary address is required.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>PinCode</label>
+            <input class="form-control" formControlName="pincode" placeholder="PinCode...">
+
+            <div *ngIf="addressFormDetails.controls['pincode'].invalid && addressFormDetails.controls['pincode'].touched"
+                class="alert alert-danger">
+                <div *ngIf="addressFormDetails.controls['pincode'].errors.required">
+                    PinCode is required.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>Country</label>
+            <input class="form-control" formControlName="country" placeholder="Country...">
+
+            <div *ngIf="addressFormDetails.controls['country'].invalid && addressFormDetails.controls['country'].touched"
+                class="alert alert-danger">
+                <div *ngIf="addressFormDetails.controls['country'].errors.required">
+                    Country is required.
+                </div>
+
+            </div>
+
+        </div>
+    </div><br>
+</form>

@@ -1,0 +1,58 @@
+<h3>Personal Details</h3>
+<form [formGroup]="personalFormDetails">
+
+    <div class="row">
+        <div class="col">
+            <label>FirstName</label>
+            <input class="form-control" formControlName="firstName" placeholder="First Name...">
+
+            <div *ngIf="personalFormDetails.controls['firstName'].invalid && personalFormDetails.controls['firstName'].touched"
+                class="alert alert-danger">
+                <div *ngIf="personalFormDetails.controls['firstName'].errors.required">
+                    First Name is required.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col">
+            <label>LastName</label>
+            <input class="form-control" formControlName="lastName" placeholder="Last name...">
+
+            <div *ngIf="personalFormDetails.controls['lastName'].invalid && personalFormDetails.controls['lastName'].touched"
+                class="alert alert-danger">
+                <div *ngIf="personalFormDetails.controls['lastName'].errors.required">
+                    Last Name is required.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>Gender</label>
+            <input class="form-control" formControlName="gender" placeholder="Gender...">
+
+            <div *ngIf="personalFormDetails.controls['gender'].invalid && personalFormDetails.controls['gender'].touched"
+                class="alert alert-danger">
+                <div *ngIf="personalFormDetails.controls['gender'].errors.required">
+                    Gender is required.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col">
+            <label>Email</label>
+            <input class="form-control" formControlName="email" placeholder="Email..." required>
+
+            <div *ngIf="personalFormDetails.controls['email'].invalid && personalFormDetails.controls['email'].touched"
+                class="alert alert-danger">
+                <div *ngIf="personalFormDetails.controls['email'].errors.required">
+                    Email is required.
+                </div>
+            </div>
+
+        </div>
+    </div><br>
+</form>
