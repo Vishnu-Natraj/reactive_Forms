@@ -31,7 +31,14 @@
 
         <div class="col">
             <label>Gender</label>
-            <input class="form-control" formControlName="gender" placeholder="Gender...">
+            <!-- <input class="form-control" formControlName="gender" placeholder="Gender..."> -->
+            <label for="cars">Choose a car:</label>
+
+            <select name="Gender" id="Gender" class="form-control" formControlName="gender">
+                <option value="" selected disabled hidden>Please Select</option>                
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
 
             <div *ngIf="personalFormDetails.controls['gender'].invalid && personalFormDetails.controls['gender'].touched"
                 class="alert alert-danger">

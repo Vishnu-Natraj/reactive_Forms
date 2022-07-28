@@ -13,8 +13,6 @@ import { PersonalDetailsComponent } from '../personal-details/personal-details.c
 })
 export class TotalDetailsComponent implements OnInit {
 
-  // public personFormDetails: any;
-
   formsnapshot: any;
 
   personalFormDetails: FormGroup | any = {};
@@ -38,11 +36,22 @@ export class TotalDetailsComponent implements OnInit {
     designation: ''
   }
 
+  show: any
+
   constructor() {
 
     this.createpersonaldetails();
     this.createcompanydetails();
     this.createaddressdetails();
+
+    console.log("GETTING DATA FROM PERSONAL DETAILS USING GETITEM",
+      this.show = localStorage.getItem("personal details"));
+
+    console.log("GETTING DATA FROM COMPANY DETAILS USING GETITEM",
+      this.show = localStorage.getItem("company details"));
+
+    console.log("GETTING DATA FROM ADDRESS DETAILS USING GETITEM",
+      this.show = localStorage.getItem("address details"));
   }
 
 

@@ -9,9 +9,6 @@ import { Person } from '../Person';
 })
 export class CompanyDetailsComponent implements OnInit {
   @Input() companyFormDetails: any = {};
-
-  // public companyFormDetails: FormGroup | any;
-
   formsnapshot: any;
 
   public person: Person = {
@@ -22,19 +19,9 @@ export class CompanyDetailsComponent implements OnInit {
   }
 
   constructor() {
-    // this.createcompanydetails();
+
   }
 
   ngOnInit(): void {
   }
-
-  // createcompanydetails() {
-  //   this.companyFormDetails = new FormGroup({
-  //     companyName: new FormControl(this.person.companyName, Validators.required),
-  //     employeeName: new FormControl(this.person.employeeName, Validators.required),
-  //     employeeId: new FormControl(this.person.employeeId, Validators.required),
-  //     designation: new FormControl(this.person.designation, Validators.required)
-  //   })
-  // }
-
 }

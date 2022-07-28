@@ -9,7 +9,6 @@ import { Person } from '../Person';
 })
 export class AddressFormsComponent implements OnInit {
   @Input() addressFormDetails: FormGroup | any = {};
-  // public addressFormDetails: FormGroup | any;
   formsnapshot: any;
 
   public person: Person = {
@@ -20,19 +19,12 @@ export class AddressFormsComponent implements OnInit {
   }
 
   constructor() {
-    // this.createaddressdetails();
+
   }
 
   ngOnInit(): void {
   }
 
-  // createaddressdetails() {
-  //   this.addressFormDetails = new FormGroup({
-  //     primaryAddress: new FormControl(this.person.primaryAddress, Validators.required),
-  //     secondaryAddress: new FormControl(this.person.secondaryAddress, Validators.required),
-  //     pincode: new FormControl(this.person.pincode, Validators.required),
-  //     country: new FormControl(this.person.country, Validators.required),
-  //   })
-  // }
+
 
 }
